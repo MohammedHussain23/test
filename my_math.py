@@ -17,7 +17,15 @@ def math_operations(a, b):
         'division': a / b if b != 0 else 'undefined'
     }
 
+def add(*args):
+    """Add two or more numbers."""
+    sum = 0
+    for arg in args:
+        sum += arg
+    return sum
+
+
 if __name__ == "__main__":
     # Example usage
-    result = math_operations(10, 5)
+    result = add(1, 2, 3, 4)
     print(result)
