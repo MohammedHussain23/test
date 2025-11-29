@@ -24,8 +24,17 @@ def add(*args):
         sum += arg
     return sum
 
+def sub(*args):
+    """Subtract two or more numbers."""
+    if len(args) < 2:
+        raise ValueError("At least two numbers are required for subtraction.")
+    sub = args[0]
+    for arg in args[1:]:
+        sub -= arg
+    return sub
 
 if __name__ == "__main__":
     # Example usage
-    result = add(1, 2, 3, 4)
+    inp = int(input("1 for add and 2 for sub: "))
+    result = sub(3, 1, 2) if inp == 2 else add(3, 1, 2)
     print(result)
